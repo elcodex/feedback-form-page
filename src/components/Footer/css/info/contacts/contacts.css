@@ -1,0 +1,49 @@
+.info__contacts {
+    flex: 0 1 45%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts__text {
+    flex: 1;
+}
+
+.item_font_roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.contacts__item {
+    display: flex;
+    align-items: baseline;
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+
+    margin-bottom: 1.7rem;
+}
+
+.contacts__icon {
+    margin-right: 0.6rem;
+    width: 20px;
+}
+
+.contacts__img {
+    vertical-align: middle;
+}
+
+.contacts__link:link,
+.contacts__link:visited,
+.contacts__link:hover,
+.contacts__link:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social__li {
+    display: inline-block;
+    margin-right: 0.7rem;
+}
+
+.contacts__social {
+    margin-bottom: 1rem;
+}

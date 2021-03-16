@@ -1,0 +1,15 @@
+@import "./copyright/copyright.css";
+@import "./info/info.css";
+@import "./info/info.mobile.css";
+
+.footer {
+    background-color: #4A99D3;
+    color: #ffffff;
+    font-family: Objective;
+}
+
+.list_style_none {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

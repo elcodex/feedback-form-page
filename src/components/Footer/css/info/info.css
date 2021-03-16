@@ -1,0 +1,9 @@
+@import "./links/links.css";
+@import "./contacts/contacts.css";
+@import "./contacts/contacts.mobile.css";
+
+.footer__info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.75rem 3.9rem 1.5rem;
+}
