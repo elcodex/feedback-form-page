@@ -1,0 +1,58 @@
+.nav {
+    flex: 1 auto;
+    max-width: calc(950px + 2 * 1rem);
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: stretch;
+    background-color: transparent;
+}
+
+.nav__img {
+    max-width: 280px;
+    max-height: 62px;
+}
+
+.nav__menu {
+    flex: 1;
+    text-align: right;
+    list-style: none;
+    padding: 0;
+}
+
+.menu__item {
+    display: inline-block;
+}
+
+.menu__item:nth-child(1n + 2) {
+    margin-left: 2.4rem;
+}
+.menu__link {
+    font-family: Noto Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+}
+
+.menu__link:link,
+.menu__link:visited,
+.menu__link:hover,
+.menu__link:active {
+    text-decoration: none;
+    color: #0F001A;
+}
+
+.menu_selected:link,
+.menu_selected:visited,
+.menu_selected:hover,
+.menu_selected:active {
+    color: #4A99D3;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+}
