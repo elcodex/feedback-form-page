@@ -1,4 +1,5 @@
-import "./Header.css";
+import "./css/header.css";
+import "./css/header.mobile.css";
 
 export default function Header() {
     return (
