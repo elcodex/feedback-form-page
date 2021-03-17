@@ -1,0 +1,47 @@
+.form__input {
+    position: relative;
+
+    font-family: Noto Sans;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    color: #878787;
+}
+
+.input__label {
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+}
+
+.input {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    margin: 0;
+    font-size: 0.8rem;
+
+    display: block;
+
+    border: 1.2px solid #B4BEC8;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.input, .input__label {
+    padding: 1rem 0.7rem;
+}
+
+.label_top {
+    color: #0F001A;
+    padding: 0 .5rem;
+    top: calc(-8px);
+    left: 5px;
+    background-color: white;
+}
