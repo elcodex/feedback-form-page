@@ -1,5 +1,12 @@
 @media screen and (max-width: 1000px) {
     .footer__info {
         justify-content: center;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer__info {
+        flex-direction: column;
     }
 }

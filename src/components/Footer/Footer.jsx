@@ -42,7 +42,9 @@ export default function Footer() {
                                     <img className="contacts__img" src={`${process.env.PUBLIC_URL}/static/media/map-marker.svg`} alt="" />
                                 </div>
                                 <div>
-                                    Information technologies building, Victoria Island, Lagos, Nigeria.
+                                    Information technologies building,
+                                    <br />
+                                    Victoria Island, Lagos, Nigeria.
                                 </div>
                             </li>
 
@@ -69,23 +71,31 @@ export default function Footer() {
                         </ul>
                         <ul className="contacts__social list_style_none">
                             <li className="social__li">
-                                <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                                    <img src={`${process.env.PUBLIC_URL}/static/media/youtube.svg`} alt="" />
+                                <a href="https://youtube.com" target="_blank" rel="noreferrer" title="youtube">
+                                    <div className="social__li__container">
+                                        <img src={`${process.env.PUBLIC_URL}/static/media/youtube.svg`} alt="" />
+                                    </div>
                                 </a>
                             </li>
                             <li className="social__li">
-                                <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                                    <img src={`${process.env.PUBLIC_URL}/static/media/instagram.svg`} alt="" />
+                                <a href="https://instagram.com" target="_blank" rel="noreferrer" title="instagram">
+                                    <div className="social__li__container">
+                                        <img src={`${process.env.PUBLIC_URL}/static/media/instagram.svg`} alt="" />
+                                    </div>
                                 </a>
                             </li>
                             <li className="social__li">
-                                <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                                    <img src={`${process.env.PUBLIC_URL}/static/media/facebook.svg`} alt="" />
+                                <a href="https://facebook.com" target="_blank" rel="noreferrer" title="facebook">
+                                    <div className="social__li__container">
+                                        <img src={`${process.env.PUBLIC_URL}/static/media/facebook.svg`} alt="" />
+                                    </div>
                                 </a>
                             </li>
                             <li className="social__li">
-                                <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                                    <img src={`${process.env.PUBLIC_URL}/static/media/twitter.svg`} alt=""/>
+                                <a href="https://twitter.com" target="_blank" rel="noreferrer" title="twitter">
+                                    <div className="social__li__container">
+                                        <img src={`${process.env.PUBLIC_URL}/static/media/twitter.svg`} alt=""/>
+                                    </div>
                                 </a>
                             </li>
                         </ul>

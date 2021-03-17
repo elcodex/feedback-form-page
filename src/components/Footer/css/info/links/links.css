@@ -4,12 +4,14 @@
 }
 
 .links__img {
-    max-width: 280px;
-    max-height: 62px;
+    max-width: 100%;
+    max-height: auto;
 }
 
 .links__logo {
     margin-bottom: 2.8rem;
+    width: 280px;
+    height: 62px;
 }
 
 .links__title {

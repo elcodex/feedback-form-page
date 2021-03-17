@@ -6,6 +6,8 @@
 
 .contacts__text {
     flex: 1;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 .item_font_roboto {
@@ -41,9 +43,9 @@
 
 .social__li {
     display: inline-block;
-    margin-right: 0.7rem;
+    margin-right: 1.1rem;
 }
 
-.contacts__social {
-    margin-bottom: 1rem;
+.contacts__map {
+    flex-basis: 50%;
 }

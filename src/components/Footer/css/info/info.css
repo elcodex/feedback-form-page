@@ -1,4 +1,5 @@
 @import "./links/links.css";
+@import "./links/links.mobile.css";
 @import "./contacts/contacts.css";
 @import "./contacts/contacts.mobile.css";
 
