@@ -51,11 +51,19 @@
 }
 
 .uploader__text {
-    font-family: Noto Sans;
+    font-family: "Noto Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
 
     color: #878787;
+}
+
+.files__caption {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 27px;
 }
