@@ -8,7 +8,7 @@ function getFileNames(state, files) {
     for (let i = 0; i < files.length; i++) {
         names.push(files[i].name);
     }
-    console.log(files);
+    
     return names;
 }
 
