@@ -41,7 +41,12 @@
     overflow-y: auto;
     padding-bottom: 0;
     margin-top: 0;
+
     font-size: 14px;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.4;
 }
 
 .files__caption,
