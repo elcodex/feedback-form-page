@@ -2,35 +2,63 @@ import { postData } from "./requests";
 import { ERRORS } from "./errors";
 
 export async function sendData({name = "", email = "", message = "", files = []}) {
-    if (files.length) {
-        const filesSizes = files.reduce((sum, {size}) => sum + size, 0);
-        if (filesSizes > 1024 * 2) {
-            return {error: ERRORS.FILE_SIZE}
+    try {
+        validate({name, email, message, files});
+
+        const formData = new FormData();
+        formData.append("test_name", name);
+        formData.append("test_email", email);
+        formData.append("test_message", message);
+    
+        files.forEach(file =>
+            formData.append("test_file", file)
+        );
+
+        const response = await postData(formData);
+
+        if (!response.ok) {
+            if (response.status >= 500) {
+                return {error: ERRORS.SERVER}
+            }
+
+            if (response.status === 400) {
+                return {error: await response.text()}
+            }
+
+            return {error: ERRORS.GLITCH}
         }
+
+    } catch (error) {
+        return { error: error.message }
+    }
+}
+
+function validate(data = {}) {
+    // text validation
+    let missingRequiredData = [];
+
+    if (!data.name) {
+        missingRequiredData.push("Name");
     }
 
-    const formData = new FormData();
-    formData.append("test_name", name);
-    formData.append("test_email", email);
-    formData.append("test_message", message);
+    if (!data.email) {
+        missingRequiredData.push("Email");
+    }
 
-    files.forEach(file =>
-        formData.append("test_file", file)
-    );
+    if (!data.message) {
+        missingRequiredData.push("Message");
+    }
 
-    const response = await postData(formData);
+    if (missingRequiredData.length) {
+        throw new Error(`Please fill ${missingRequiredData.join(", ")}.`);
+    }
 
-    if (!response.ok) {
-        console.log(response.status);
-        if (response.status >= 500) {
-            return {error: ERRORS.SERVER}
+    //files validation
+    if (data.files?.length) {
+        const filesSizes = data.files.reduce((sum, {size}) => sum + size, 0);
+        
+        if (filesSizes > 2 * 1024 * 1024) {
+            throw new Error(ERRORS.FILE_SIZE);
         }
-
-        if (response.status === 400) {
-            console.log(400);
-            return {error: await response.text()}
-        }
-
-        return {eror: ERRORS.GLITCH}
     }
 }
